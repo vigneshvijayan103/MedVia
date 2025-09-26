@@ -1,0 +1,6 @@
+@MedFinderApi_HostAddress = http://localhost:5090
+
+GET {{MedFinderApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
