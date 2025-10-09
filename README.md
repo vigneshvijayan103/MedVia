@@ -1,4 +1,4 @@
-<h1 align="center">🤖 MedVia</h1>
+<h1 align="center">🤖 MedVia medical </h1>
 <p align="center">
   Your AI-powered medicine guide  <br>
   Fully dynamic medicine information platform.
