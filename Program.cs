@@ -25,8 +25,12 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IGenerativeAI>(sp =>
 {
-    // Get API key from appsettings.json or environment variable
-    var apiKey = builder.Configuration["Gemini:ApiKey"];
+    var apiKey = Environment.GetEnvironmentVariable("GEMINI_API_KEY")
+          ?? builder.Configuration["Gemini:ApiKey"];
+
+    if (string.IsNullOrEmpty(apiKey))
+        throw new Exception("Gemini API key is not configured.");
+
     return new GoogleAI(apiKey);
 });
 
